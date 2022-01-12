@@ -17,21 +17,21 @@
                 Candy
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Hard Candy</a>
-                <a href="" class="dropdown-item">Soft Candy</a>
-                <a href="" class="dropdown-item">Chocolate Candy</a>
-                <a href="" class="dropdown-item">Magical Candy</a>
+                <a href="{% url 'products' %}?category=activewear,hardcandy" class="dropdown-item">Hard Candy</a>
+                <a href="{% url 'products' %}?category=activewear,softcandy" class="dropdown-item">Soft Candy</a>
+                <a href="{% url 'products' %}?category=activewear,chocolatecandy" class="dropdown-item">Chocolate Candy</a>
+                <a href="{% url 'products' %}?category=activewear,magicalcandy" class="dropdown-item">Magical Candy</a>
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=activewear,merchandise">
                 Merchandise
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?category=activewear,goldenraffleticket">
                 Golden Ticket Raffle
             </a>
         </li>
