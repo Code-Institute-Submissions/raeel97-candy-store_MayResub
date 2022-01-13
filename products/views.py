@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
 from django.db.models.functions import Lower
+
+from .models import Product, Category
 
 # Create your views here.
 
@@ -46,6 +47,7 @@ def all_products(request):
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': query,
