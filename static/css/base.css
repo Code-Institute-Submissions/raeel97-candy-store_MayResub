@@ -170,6 +170,12 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+/* ---------------------------- BS Override bag icon */
+
+.cart-total {
+    color: #aa75a8 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
