@@ -80,6 +80,7 @@ TEMPLATES = [
     },
 ]
 
+# Stores messages in the session for gitpod, not essential
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
