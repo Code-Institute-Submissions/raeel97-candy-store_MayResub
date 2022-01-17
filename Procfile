@@ -1,1 +1,1 @@
-web: gunicorn chocolate-factory963.wsgi:application
+web: gunicorn chocolate_factory.wsgi:application
