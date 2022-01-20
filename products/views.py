@@ -76,7 +76,8 @@ def product_detail(request, product_id):
     # field under Add Review
     if request.user.is_authenticated:
         username = User.objects.get(username=request.user)
-    else username = ''
+    else:
+        username = ''
     # Add Review
 
     if request.method == 'POST' and request.user.is_authenticated:
