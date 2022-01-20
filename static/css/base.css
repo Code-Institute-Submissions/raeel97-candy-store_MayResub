@@ -270,6 +270,11 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.btn-signup {
+    background-color: #aa75a8;
+    color: #fff;
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -295,4 +300,9 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+}
+
+
+#review-message {
+    font-size: smaller;
 }
