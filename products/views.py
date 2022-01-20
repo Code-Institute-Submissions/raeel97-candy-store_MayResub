@@ -74,7 +74,9 @@ def product_detail(request, product_id):
     review_form = ReviewForm()
     # username takes logged in users username and passes it into name form 
     # field under Add Review
-    username = User.objects.get(username=request.user)
+    if request.user.is_authenticated:
+        username = User.objects.get(username=request.user)
+    else username = ''
     # Add Review
 
     if request.method == 'POST' and request.user.is_authenticated:
