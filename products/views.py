@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.views import View
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
+
 
 # Create your views here.
 
@@ -61,16 +64,34 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details and show/add reviews"""
 
-    product = get_object_or_404(Product, pk=product_id)
+    # current_product returns the product name of the current product being 
+    # displayed. reviews filters the Review model taking the product name field
+    #  as a parameter and filteriing it against the current_product value
+    current_product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.all().filter(product__name=current_product)
+    review_form = ReviewForm()
+    # username takes logged in users username and passes it into name form 
+    # field under Add Review
+    username = User.objects.get(username=request.user)
+    # Add Review
 
+    if request.method == 'POST' and request.user.is_authenticated:
+        name = request.POST.get('name', username)
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+        review = Review.objects.create(product=current_product, name=name, 
+        email=email, message=message)
+
+    
     context = {
-        'product': product,
+        'current_product': current_product,
+        'reviews': reviews,
+        'review_form': review_form
     }
 
     return render(request, 'products/product_detail.html', context)
-
 
 @login_required
 def add_product(request):
