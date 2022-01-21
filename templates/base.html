@@ -112,7 +112,6 @@
             </div>            
         </div>
     </header>
-
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -136,6 +135,10 @@
 
     {% block content %}
     {% endblock %}
+
+<!-- Footer -->
+    {% include 'includes/footer.html' %}
+    <!-- Footer -->
 
     {% block postloadjs %}
     <script type="text/javascript">
