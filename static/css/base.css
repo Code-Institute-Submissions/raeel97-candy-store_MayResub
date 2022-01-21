@@ -323,5 +323,11 @@ input[name='q']::placeholder {
 }
 
 .explore-button {
-    border: solid 1px #f5d48c;
+    background: #432a42;
+    color: #f5d48c;
 }
+
+.footer-div {
+    background: linear-gradient(#de4705, #fab036,#f5d48c)!important;    
+}
+
