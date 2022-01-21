@@ -29,8 +29,9 @@ body {
 
 .shop-now-button {
     background: #432a42;
-    color: white;
+    color: #aa75a8;
     min-width: 260px;
+    border: #aa75a8 solid 1px;
 }
 
 .btn-black {
@@ -305,4 +306,22 @@ input[name='q']::placeholder {
 
 #review-message {
     font-size: smaller;
+}
+
+/* CSS Overide  */
+
+.top-nav {
+    background: linear-gradient(#de4705, #fab036)!important;
+}
+
+#bottom-nav {
+    background: linear-gradient(#fab036, #f5d48c)!important;
+}
+
+.homepage-styling {
+    color: #f5d48c;;
+}
+
+.explore-button {
+    border: solid 1px #f5d48c;
 }
