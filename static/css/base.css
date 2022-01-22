@@ -331,3 +331,10 @@ input[name='q']::placeholder {
     background: linear-gradient(#de4705, #fab036,#f5d48c)!important;    
 }
 
+.margin-override {
+    margin: 0 !important;
+}
+
+.padding-override {
+    padding: 0 !important;
+}
