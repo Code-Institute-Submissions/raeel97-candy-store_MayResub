@@ -21,10 +21,9 @@ def contact_view(request):
             be sent to {email}.")
             send_mail(subject, message_body,
             'chocolatefactory.customercare@gmail.com', [email])
-            # except Exception as e:
-            #     messages.warning(request, error)
-            #     print('not working')
-            #     return redirect(reverse(contact_view))
+            except Exception as e:
+                messages.warning(request, error)
+                return redirect(reverse(contact_view))
             print(f'this is the email: {email}')
             print(f'this is the subject: {subject}')
             print(f'this is the message_body: {message_body}')
