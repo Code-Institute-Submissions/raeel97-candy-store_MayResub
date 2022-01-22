@@ -4,3 +4,10 @@ input[type=text], input[type=email], textarea {
     margin: 8px 0;
     display: inline-block;
    }
+
+/* .contact_crispy_override {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+   } */
