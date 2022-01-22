@@ -19,14 +19,13 @@ def contact_view(request):
             success = (f"Thank you for your inquiry! Your contact information \
             and message was successfully submitted. A confirmation email will \
             be sent to {email}.")
-            send_mail(subject, message_body,
-            'chocolatefactory.customercare@gmail.com', [email])
+            try:
+                send_mail(subject, message_body,
+                'chocolatefactory.customercare@gmail.com', [email])
             except Exception as e:
                 messages.warning(request, error)
                 return redirect(reverse(contact_view))
-            print(f'this is the email: {email}')
-            print(f'this is the subject: {subject}')
-            print(f'this is the message_body: {message_body}')
+
             messages.success(request, success)
             return redirect(reverse(index))
     form = ContactForm()
