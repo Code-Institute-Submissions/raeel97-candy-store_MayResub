@@ -24,7 +24,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "/workspace/candy-store/updates/templates/updates/post_detail.html",
+            "updates/templates/updates/post_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -55,7 +55,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "/workspace/candy-store/updates/templates/updates/post_detail.html",
+            "updates/templates/updates/post_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -75,4 +75,4 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('/workspace/candy-store/updates/templates/updates/post_detail.html', args=[slug]))
+        return HttpResponseRedirect(reverse('updates/templates/updates/post_detail.html', args=[slug]))
