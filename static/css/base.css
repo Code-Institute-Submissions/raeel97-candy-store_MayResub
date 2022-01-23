@@ -349,3 +349,9 @@ form was effecting it */
     margin: revert !important;
     display: unset !important;
 }
+
+
+.post-detail {
+    background-color: white;
+    padding-top: 5px;
+}
