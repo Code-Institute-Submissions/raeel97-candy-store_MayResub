@@ -50,9 +50,11 @@ INSTALLED_APPS = [
     'profiles',
     'storages',
     'contact',
+    'updates',
     
     # Other
     'crispy_forms',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -207,7 +209,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 FREE_SHIPPING_THRESHOLD = 50
 STANDARD_SHIPPING_PERCENTAGE = 10
-FREE_GOLDEN_TICKET_AMOUNT = 25
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
