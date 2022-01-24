@@ -293,6 +293,8 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -310,6 +312,42 @@ input[name='q']::placeholder {
         background-color: #432a42;
         border: #432a42 solid 0.1px;
         border-radius: 5px;
+    }
+
+    .display-4.logo-font.text-black {
+        font-size: 1.8rem;
+    }
+
+    .nav-link {
+        padding: 0.1rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 0.9rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 0.7rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
     }
     
 }
