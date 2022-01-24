@@ -29,9 +29,9 @@ body {
 
 .shop-now-button {
     background: #432a42;
-    color: #aa75a8;
+    color: #c4aac3;
     min-width: 260px;
-    border: #aa75a8 solid 1px;
+    border: #c4aac3 solid 1px;
 }
 
 .btn-black {
@@ -177,7 +177,7 @@ input[name='q']::placeholder {
 /* ---------------------------- BS Override bag icon */
 
 .cart-total {
-    color: #aa75a8!important;
+    color: #c4aac3!important;
     background-color: #432a42;
     border: #432a42 solid 3px;
     border-radius: 5px;
@@ -275,7 +275,7 @@ input[name='q']::placeholder {
 }
 
 .btn-signup {
-    background-color: #aa75a8;
+    background-color: #c4aac3;
     color: #fff;
 }
 
@@ -306,7 +306,7 @@ input[name='q']::placeholder {
     }
     
     .cart-total {
-        color: #aa75a8!important;
+        color: #c4aac3!important;
         background-color: #432a42;
         border: #432a42 solid 0.1px;
         border-radius: 5px;
