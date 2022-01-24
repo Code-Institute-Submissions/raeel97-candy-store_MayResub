@@ -361,6 +361,13 @@ form was effecting it */
     display: unset !important;
 }
 
+.footer-list > * {
+    color: #f5d48c;
+    background-color: #432a42;
+    border: 2px solid #432a42;
+    border-radius: 5px;
+}
+
 
 .post-detail {
     background-color: white;
