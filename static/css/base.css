@@ -377,7 +377,8 @@ input[name='q']::placeholder {
 }
 
 .footer-div {
-    background: linear-gradient(#de4705, #fab036,#f5d48c)!important;    
+    background: linear-gradient(#de4705, #fab036,#f5d48c)!important; 
+    margin-top: 10px;   
 }
 
 .margin-override {
@@ -406,6 +407,12 @@ form was effecting it */
     border-radius: 5px;
 }
 
+#github {
+    color: #007bff;
+    background-color: #432a42;
+    border: 2px solid #432a42;
+    border-radius: 5px;
+}
 
 .post-detail {
     background-color: white;
