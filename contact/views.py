@@ -15,10 +15,10 @@ def contact_view(request):
             email = request.POST.get('email', '')
             subject = request.POST.get('subject', '')
             message_body = request.POST.get('message', '')
-            store_message = f"The following message {message_body} was sent \
-            supplied from the contact form. Please respond to the \
+            store_message = f"The following message: {message_body} was sent\
+            from the contact form. Please respond to the\
             following email: {email}"
-            store_subject = f"Contact form query:{subject}"
+            store_subject = f"Contact form query: {subject}"
             success = (f"Thank you for your inquiry! Your contact information \
             and message was successfully submitted. A confirmation email will \
             be sent to {email}.")
