@@ -27,7 +27,7 @@ This web app will allow users to explore the fond memories of their childhood an
 + [Database](#Database)
 + [Testing](#Tests)
 + [Technologies Used](#Technologies-Used)
-     + [General Resources](#General-Resources)
+     + [Resources](#Resources)
      + [Tools](#Tools)
 + [Deployment](#Deployment)
      + [Heroku Deployment](#Heroku-Deployment)
@@ -255,7 +255,7 @@ The database contains three custom models - review, comment/post and contact.
 - [STRIPE](https://stripe.com/) for payments
 
 
-## Resources used in project
+## Resources 
 
 - Code Institute Course Materials
 - [Stack Overflow](https://stackoverflow.com/)
@@ -327,6 +327,13 @@ This project was deployed through Heroku in the following steps:
 [back to top](#Table-of-contents)
 <br>
 
+# Business
+A facebook page was created to expand the business model. 
+<br>
+<br>
+[Facebook](https://www.facebook.com/chocolatefactory963)
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/PP5-Facebook_screenshot.JPG">
+
 # Credits
 ### Code
 * [Code Institute](https://codeinstitute.net/ie/) supplied the bulk of the tutorials, resources and support for this project!
@@ -339,7 +346,7 @@ This project was deployed through Heroku in the following steps:
 * [Stack Overflow](https://stackoverflow.com/) 
 * [MDN Web Docs](https://developer.mozilla.org/) for various tutorials and walkthroughs!
 * [Django Docs](https://docs.djangoproject.com/en/3.2/) for django documentation.
-* [Github Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site) and (https://www.youtube.com/watch?v=3SKjPppM_DU) was used to create the 404 page.
+
 
 
 ### Media
