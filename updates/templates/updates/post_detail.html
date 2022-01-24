@@ -17,9 +17,9 @@
         <div class="col-md-6 float-right">
             <!-- The featured image URL goes in the src attribute -->
             {% if "placeholder" in post.featured_image.url %}
-            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" style="width:100%;" alt="Default image">
             {% else %}
-            <img src=" {{ post.featured_image.url }}" width="100%">
+            <img src=" {{ post.featured_image.url }}" style="width:100%;" alt="Featured image relating to {{ post.excerpt }}">
             {% endif %}
         </div>
         <div class="col-md-6 float-left">
@@ -36,7 +36,6 @@
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
                     {{ post.content | safe }}
-                </p>
                 <div class="row">
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
@@ -102,6 +101,5 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 {% endblock content %}

@@ -36,7 +36,7 @@ body {
 
 .btn-black {
     background: #432a42;
-    color: white;
+    color: #f5d48c;
 }
 
 .btn-outline-black {
@@ -177,7 +177,10 @@ input[name='q']::placeholder {
 /* ---------------------------- BS Override bag icon */
 
 .cart-total {
-    color: #aa75a8 !important;
+    color: #aa75a8!important;
+    background-color: #432a42;
+    border: #432a42 solid 3px;
+    border-radius: 5px;
 }
 
 /* Allauth form formatting */
@@ -301,11 +304,19 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+    
+    .cart-total {
+        color: #aa75a8!important;
+        background-color: #432a42;
+        border: #432a42 solid 0.1px;
+        border-radius: 5px;
+    }
+    
 }
 
 
-#review-message {
-    font-size: smaller;
+.review-message {
+    font-size: smaller!important;
 }
 
 /* CSS Overide  */
