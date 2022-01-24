@@ -232,6 +232,10 @@ The database contains three custom models - review, comment/post and contact.
 
 ![database](https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/database-schema.JPG)<br>
 
+Sitemap screenshot 
+
+![sitemap](https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/sitemap.JPG)<br>
+
 ###
 
 # Technologies Used

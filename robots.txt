@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://chocolate-factory963.herokuapp.com/sitemap.xml
