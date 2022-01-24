@@ -5,9 +5,9 @@ Chocolate Factory is an django e-commerce web app inspired by the Willy Wonka Fr
 This web app will allow users to explore the fond memories of their childhood and purchase the products they have always dreamed of!
 ## Demo
 
-[View the Live Website Here](###############)
+[View the Live Website Here](https://chocolate-factory963.herokuapp.com/)
 
-insert ami responsive image
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/am-i-responsive.JPG">
 
 
 ## Table of contents
@@ -78,7 +78,7 @@ The functionalities below are minimum requirements for the website to achieve th
 
 <br>
 
-[^ back to top ^](#Table-of-contents)
+[back to top](#Table-of-contents)
 <br>
 
 
@@ -96,7 +96,7 @@ To achieve user and owner’s goals, above are the minimum features to be includ
 - Search 
 - 404 page that appears for invalid URL and takes users back to *Home* page of the website safely
 
-[^ back to top ^](#Table-of-contents)
+[back to top](#Table-of-contents)
 <br>
 > 
 
@@ -133,7 +133,7 @@ The main pages of the website are:
 - Profile page(profile.html) - Enables users to edit their delivery information and view past orders.
 <br>
 
-[^ back to top ^](#Table-of-contents)
+[back to top](#Table-of-contents)
 <br>
 
 
@@ -141,7 +141,40 @@ The main pages of the website are:
 
 ### Wireframes
 
-input wireframes
+Home Page
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Home+Page+.png">
+<br>
+Products Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Products+Display+.png">
+<br>
+Product Detail Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Product+Item+View+.png">
+<br>
+Update Post Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Updates+Page+copy.png">
+<br>
+Bag Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Bag+View.png">
+<br>
+Checkout Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Checkout.png">
+<br>
+Profile Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Profile+View+.png">
+<br>
+Contact Form Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Contact+Form.png">
+<br>
+Updates Page
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Updates+Page.png">
 
 
 ## Surface
@@ -150,8 +183,12 @@ input wireframes
 
 The colors for the webapp were used in inspiration of the purple and yellow theme in the Wonka franchise whilst keeping accesibility and contrast rules in mind. 
 <br>
-insert color palette 
-[^ back to top ^](#Table-of-contents)
+_Color Palette_
+<br>
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/color-palette.JPG">
+<br>
+[back to top](#Table-of-contents)
 <br>
 
 
@@ -161,17 +198,17 @@ insert color palette
 ## Existing Features 
 #### **Navigation menu displayed across all pages**
 
-Navigation menu
-Search bar
-Website Title that redirects to home page
-A bag icon that reflects total amount in bag
-Product management tool for site admin to implement CRUD functionality
-Ability to pay securely through STRIPE
-Contact Form
-Updates page in blog style
-Ability to review products and comment on update posts
-Ability to sign in, sign out and register
-Ability to view past orders and input default delivery information
+- Navigation menu
+- Search bar
+- Website Title that redirects to home page
+- A bag icon that reflects total amount in bag
+- Product management tool for site admin to implement CRUD functionality
+- Ability to pay securely through STRIPE
+- Contact Form
+- Updates page in blog style
+- Ability to review products and comment on update posts
+- Ability to sign in, sign out and register
+- Ability to view past orders and input default delivery information
     
 
 ## Features to Implement in the future 
@@ -182,7 +219,7 @@ Ability to view past orders and input default delivery information
 - Ability to edit and delete updates posts.
 - A wishlist
 
-[^ back to top ^](#Table-of-contents)
+[back to top](#Table-of-contents)
 <br>
 
 
@@ -193,7 +230,7 @@ Amazon Web Services is used for the hosting of all media and static files.
 <br>
 The database contains three custom models - review, comment/post and contact. 
 
-![database](##################)<br>
+![database](https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/database-schema.JPG)<br>
 
 ###
 
@@ -243,7 +280,7 @@ The database contains three custom models - review, comment/post and contact.
 
 <br>
 
-[^ back to top ^](#Table-of-contents)
+[back to top](#Table-of-contents)
 <br>
 
 # Testing
@@ -252,8 +289,16 @@ The entirety of the testing was done manually.
 PEP8 Flake tests, HTML and CSS Validators were also done! 
 html and CSS validator
 
-Lighthouse testing:
-insert lighthouse
+HTML Validation was done using W3C Nu HTML Validator:
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/HTML-validator-error.JPG">
+<br>
+<br>
+CSS Validation was done using W3C Jigsaw Validator:
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/CSS-validator-screenshot.JPG">
+<br>
+<br>
+Lighthouse testing was done using Chrome Developer Tools:
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/lighthouse-report.JPG">
 
 # Deployment
 ## Heroku Deployment
@@ -262,8 +307,8 @@ This project was deployed through Heroku in the following steps:
 1) A repository was created in github using the student template
 2) The repo was pushed to the cloud based IDE called GITPOD
 3) In the GITPOD terminal, django and its supporting libraries were installed using pip3
-4) The project is then created using using python3 manage.py startproject <project name>
-5) The first app is then created using python3 manage.py createapp <app name>
+4) The project is then created using using python3 manage.py startproject projectname
+5) The first app is then created using python3 manage.py createapp appname
 6) The app is then registered in the setting file in the project level settings.py. 
 7) An app is the created in heroku and the installation of postgres is done under resources making sure to add postgres url to config vars
 8) Back in the GITPOD terminal, install Django Database and psycopg2
@@ -272,19 +317,19 @@ This project was deployed through Heroku in the following steps:
 11) Create another super user
 12) Create an if else statement that checks the database url and runs the correct database accordingly. 
 13) Install gunicorn, create a procfile and log into heroku in the terminal. 
-14) Disable the static files using heroku config:set, DISABLE_COLLECTSTATIC=1 --app <appname>
+14) Disable the static files using heroku config:set, DISABLE_COLLECTSTATIC=1 --app appname
 15) Add heroku app and localhost to allowed hosts in settings.py
 16) Generate a secret key using Django secret key generator and add to config vars whilst linking it to settings.py
 16) Add, commit and push changes to Github
 17) Set heroku to automatically deploy but setting it to Github and searching/connecting to correct repo. 
 
-<br>
-[^ back to top ^](#Table-of-contents)
+
+[back to top](#Table-of-contents)
 <br>
 
 # Credits
 ### Code
-* The Code Institute material was the main source of information used to create this project.
+* [Code Institute](https://codeinstitute.net/ie/) supplied the bulk of the tutorials, resources and support for this project!
 * [Bootstrap](https://getbootstrap.com/) for creating a responsive site.
 * [Twilio](https://getbootstrap.com/) for their contact form tutorial which was adapted to create mine
 * [Code With Stein](https://www.youtube.com/channel/UCfVoYvY8BfTDeF63JQmQJvg) for his ecommerce django tutorial which I adapted for my reviews model.
@@ -298,13 +343,15 @@ This project was deployed through Heroku in the following steps:
 
 
 ### Media
-Image credits - insert docs link
+[Image credits](https://docs.google.com/document/d/1Ug8B5awlFV2-8Lzh3NQDQtSifxEIf0Ah/edit?usp=sharing&ouid=108492024794149572745&rtpof=true&sd=true)
+
 
 
 ### Acknowledgements
-* I would like to thank the Slack Community, especially the women in my cohort, who went above and beyond to help me! 
-* I would like to thank Kasia our class cohort facilitator for her tireless assistance and support! 
-* I would like to thank my mentor Chris for his support, guidance and feedback
+* I would like to thank the Slack Community and Tutor support for their help, especially the women in my cohort, who went above and beyond to help me! 
+* I would like to thank Kasia Bogucka my class cohort facilitator for her tireless assistance and support! Your weekly standup meetings and one-on-one huddles saved my hide! 
+* I would like to thank my mentor Chris for his support, guidance and feedback, without him I would have given into my imposter syndrome long ago! Thanks for going the extra mile for me!
 * I would like to also thank all my family, friends and associates who have supported me during the making of this project!
  
 ***
+[back to top](#Table-of-contents)
