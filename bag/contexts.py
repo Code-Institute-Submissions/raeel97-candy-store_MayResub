@@ -3,8 +3,9 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
-def bag_contents(request):
 
+def bag_contents(request):
+    """Creates the context for the bag"""
     bag_items = []
     total = 0
     product_count = 0
@@ -26,9 +27,9 @@ def bag_contents(request):
     else:
         shipping = 0
         free_shipping_delta = 0
-    
+
     grand_total = shipping + total
-    
+
     context = {
         'bag_items': bag_items,
         'total': total,

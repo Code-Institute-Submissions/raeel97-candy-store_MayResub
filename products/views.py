@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from django.views import View
 
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
@@ -21,7 +20,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -36,7 +35,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -45,9 +44,10 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -66,13 +66,13 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details and show/add reviews"""
 
-    # current_product returns the product name of the current product being 
+    # current_product returns the product name of the current product being
     # displayed. reviews filters the Review model taking the product name field
     #  as a parameter and filteriing it against the current_product value
     current_product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all().filter(product__name=current_product)
     review_form = ReviewForm()
-    # username takes logged in users username and passes it into name form 
+    # username takes logged in users username and passes it into name form
     # field under Add Review
     if request.user.is_authenticated:
         username = User.objects.get(username=request.user)
@@ -84,10 +84,9 @@ def product_detail(request, product_id):
         name = request.POST.get('name', username)
         email = request.POST.get('email', '')
         message = request.POST.get('message', '')
-        review = Review.objects.create(product=current_product, name=name, 
-        email=email, message=message)
+        review = Review.objects.create(product=current_product, name=name,
+                                       email=email, message=message)
 
-    
     context = {
         'current_product': current_product,
         'reviews': reviews,
@@ -95,6 +94,7 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
 
 @login_required
 def add_product(request):
@@ -110,7 +110,9 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add product. Please ensure the\
+                           form is valid.')
     else:
         form = ProductForm()
 
@@ -137,7 +139,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product.\
+                                     Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -149,7 +152,8 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
-    
+
+
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """

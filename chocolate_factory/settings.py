@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
 import dj_database_url
 
@@ -25,7 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #'DEVELOPMENT' in os.environ
+DEBUG = True
+
+# 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['chocolate-factory963.herokuapp.com', 'localhost']
 
@@ -39,10 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites', #used by social account app to create the proper callback URLs when connecting via social media accounts
+    'django.contrib.sites',  # used by social account app to create the proper
+    # callback URLs when connecting via social media accounts
     'allauth',
-    'allauth.account', #Enables basic user account stuff i.e logging in or out, user registration & password resets.
-    'allauth.socialaccount', #Enables logging in via social media like Facebook, google etc
+    'allauth.account',  # Enables basic user account stuff i.e logging in or
+    # out, user registration & password resets.
+    'allauth.socialaccount',  # Enables logging in via social media like
+    # Facebook, google etc
     'home',
     'products',
     'bag',
@@ -51,7 +55,7 @@ INSTALLED_APPS = [
     'storages',
     'contact',
     'updates',
-    
+
     # Other
     'crispy_forms',
     'django_summernote',
@@ -82,11 +86,13 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # REQUIRED FOR ALLAUTH, DONT REMOVE
-                # request context processor allows allauth & django to access the HTTP request object in templates.
+                'django.template.context_processors.request',  # REQUIRED FOR
+                # ALLAUTH, DONT REMOVE
+                # request context processor allows allauth & django to access
+                # the HTTP request object in templates.
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                                'django.template.context_processors.media',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
             'builtins': [
@@ -180,7 +186,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
-        # Cache control
+    # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',

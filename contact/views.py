@@ -3,7 +3,6 @@ from django.contrib import messages
 from .forms import ContactForm
 from home.views import index
 from django.core.mail import send_mail
-from chocolate_factory.settings import EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
 
 
 def contact_view(request):
@@ -23,9 +22,10 @@ def contact_view(request):
             and message was successfully submitted. A confirmation email will \
             be sent to {email}.")
             send_mail(subject, message_body,
-            'chocolatefactory.customercare@gmail.com', [email])
+                      'chocolatefactory.customercare@gmail.com', [email])
             send_mail(store_subject, store_message,
-            'chocolatefactory.customercare@gmail.com', ['chocolatefactory.customercare@gmail.com'])
+                      'chocolatefactory.customercare@gmail.com',
+                      ['chocolatefactory.customercare@gmail.com'])
             messages.success(request, success)
             return redirect(reverse(index))
     form = ContactForm()
