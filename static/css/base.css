@@ -418,3 +418,9 @@ form was effecting it */
     background-color: white;
     padding-top: 5px;
 }
+
+/* Overrides background color of return to top arrow button on mobile  */
+
+.return-override {
+    background-color: #c4aac3;
+}
