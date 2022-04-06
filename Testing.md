@@ -44,3 +44,7 @@
 * Sort button on product pages
     * Expected: Sort button works in direction selected and by type selected
     * Works: YES
+
+I had two other users test the website by creating profiles, making purchases and reviews etc and everything worked
+
+I tested the app on my mobile device and it worked as expected.

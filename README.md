@@ -289,7 +289,7 @@ Sitemap screenshot
 <br>
 
 # Testing
-The entirety of the testing was done manually. 
+The entirety of the testing was done manually which can be seen [here](Testing.md)
 
 PEP8 Flake tests, HTML and CSS Validators were also done! 
 html and CSS validator
