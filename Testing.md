@@ -10,10 +10,11 @@
 * Collapsible mobile navbar
     * Expected: The navbar collapses down for easier viewing on smaller screens
     * Works: YES
+    <br>
     <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/testing/mobilenav-opened.JPG">
-<br>
-<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/testing/mobilenav-collapsed.JPG">
-<br>
+    <br>
+    <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/testing/mobilenav-collapsed.JPG">
+    <br>
 * A list of all products is visible to shoppers
     * Expected: The products page displays all products to users logged in and out
     * Works: YES
@@ -37,7 +38,10 @@
 * Email registration confirmation Email
     * Expected: After a user registers they are sent an email to confirm that email address
     * Works: YES
-    <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/Wireframes/Home+Page+.png">
+    <br>
+    <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/testing/verify-email-1.JPG">
+    <br>
+    <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/testing/verify-email-2.JPG">
 <br>
 * Links to sign up or login at checkout
     * Expected: At checkout use is redirected to login/signup if those links are clicked in the checkout and the bag session is saved
@@ -52,11 +56,13 @@
 * Sign in button
     * Expected: There is a sign in button which brings user to login page - visible when logged out and isn't visible when users are logged in 
     * Works: YES
+    <br>
     <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/testing/sign-in.JPG">
 <br>
 * Logout button
     * Expected: When clicked it takes user to logout page. Visible when logged in, not visible when logged out.
     * Works: YES
+    <br>
     <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/testing/logout.JPG">
 <br>
 * Search bar in navbar
