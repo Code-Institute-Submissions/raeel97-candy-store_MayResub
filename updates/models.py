@@ -10,10 +10,8 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="updates_posts"
     )
-    featured_image_url = models.URLField('image', max_length=1024, null=True,
-                                         blank=True, default='placeholder')
-    featured_image = models.ImageField('image', null=True, blank=True,
-                                       default='placeholder')
+    featured_image = models.URLField('image', max_length=1024, null=True,
+                                         blank=True)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()

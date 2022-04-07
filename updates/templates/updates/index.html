@@ -28,11 +28,11 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
+                                {% if post.featured_image %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="{{ post.featured_image }}" alt="Featured image relating to {{ post.title }}">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Featured image relating to {{ post.excerpt }}">
+                                <img class="card-img-top" src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/default_post.jpg" alt="Broken image link">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
