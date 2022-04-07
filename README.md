@@ -291,19 +291,38 @@ Sitemap screenshot
 # Testing
 The entirety of the testing was done manually which can be seen [here](Testing.md)
 
-PEP8 Flake tests, HTML and CSS Validators were also done! 
-html and CSS validator
+**PEP8 Flake** tests, **JS** tests, **HTML and CSS Validators** were also done! 
 
-HTML Validation was done using W3C Nu HTML Validator:
-<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/HTML-validator-error.JPG">
+HTML Validation was done using **W3C Nu HTML Validator**:
+As of submission, no errors were found! All validation tests came back error free.
 <br>
-<br>
-CSS Validation was done using W3C Jigsaw Validator:
+
+
+CSS Validation was done using **W3C Jigsaw Validator**:
 <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/CSS-validator-screenshot.JPG">
 <br>
 <br>
-Lighthouse testing was done using Chrome Developer Tools:
-<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/lighthouse-report.JPG">
+
+Pep8 Validator testing was done, the only known errors that occured were on django generated and BA source code
+
+Pylint errors were ignored as these were not picked up in the pep8 validator!
+
+Other known errors or warnings were not fixed would have broken code functionality if attempted.
+
+
+**Lighthouse** testing was done using **Chrome Developer Tools** :
+
+**Mobile** Test
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/lighthouse-mobile.JPG">
+<br>
+<br>
+
+**Desktop** Test
+<br>
+<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/lighthouse-desktop.JPG">
+<br>
+
 
 # Deployment
 ## Heroku Deployment
