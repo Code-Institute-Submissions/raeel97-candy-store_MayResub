@@ -16,10 +16,11 @@
     <div class="row">
         <div class="col-md-6 float-right">
             <!-- The featured image URL goes in the src attribute -->
-            {% if "placeholder" in post.featured_image.url %}
-            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" style="width:100%;" alt="Default image">
+            {% if post.featured_image %}
+            <img class="card-img-top"
+                src="{{ post.featured_image }}" alt="Featured image relating to {{ post.title }}">
             {% else %}
-            <img src=" {{ post.featured_image.url }}" style="width:100%;" alt="Featured image relating to {{ post.excerpt }}">
+            <img class="card-img-top" src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/default_post.jpg" alt="Broken image link">
             {% endif %}
         </div>
         <div class="col-md-6 float-left">
@@ -37,10 +38,6 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 <div class="row">
-                    <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
-                    </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
