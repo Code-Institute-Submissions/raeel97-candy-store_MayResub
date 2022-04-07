@@ -305,10 +305,6 @@ CSS Validation was done using W3C Jigsaw Validator:
 Lighthouse testing was done using Chrome Developer Tools:
 <img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/lighthouse-report.JPG">
 
-# Bugs
-I could not figure out why stripe was not working on my deployed app. 
-I couldn't find sent test event. 
-<img src="https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/stripe_screenshot.JPG">
 # Deployment
 ## Heroku Deployment
 This project was deployed through Heroku in the following steps:
