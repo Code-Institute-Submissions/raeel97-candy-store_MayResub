@@ -106,6 +106,19 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
+.btn-like {
+    color: #432a42;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #432a42;
+    background: transparent;
+    border: none;
+}
 /* ------------------------------- bootstrap toasts */
 
 .message-container {

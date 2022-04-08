@@ -75,5 +75,5 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('updates/post_detail.html',
+        return HttpResponseRedirect(reverse('post_detail',
                                             args=[slug]))
