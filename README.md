@@ -231,7 +231,7 @@ Amazon Web Services is used for the hosting of all media and static files.
 <br>
 The database contains three custom models - review, comment/post and contact. 
 
-![database](https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/database-schema.JPG)<br>
+![database](https://chocolate-factory963.s3.eu-west-1.amazonaws.com/media/readme/database-diagram.JPG)<br>
 
 Sitemap screenshot 
 
